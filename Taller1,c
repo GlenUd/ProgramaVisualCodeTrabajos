@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char asig[3][20] = {"Ingles", "Calculo","Fisica"};
+    char nombres[5][20];
+    double notas[5][3];
+    int e=1;
+    for (int i = 0; i < 5; i++){
+        printf("ingrese nombre %d: ", e++);
+        fflush(stdin);
+        fgets(nombres[i], 20, stdin);
+    }
+    for(int g=0; g<3; g++){
+      printf("Asignatura de %s \n", asig[0]); 
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++){
+                printf("%2.f\t", notas[i][j]);
+              printf("%s Nota-[%d][%d]",nombres[j],i+1,j+1);
+            scanf ("%f",&notas[i][j]);
+        }
+    }
+    }
+
+}
